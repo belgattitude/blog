@@ -15,7 +15,7 @@
 /node_modules
 
 # build files
-build
+/build
 
 # compiled output
 /dist
