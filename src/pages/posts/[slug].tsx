@@ -1,15 +1,17 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { Container } from '../../components/container';
-import { PostBody } from '../../components/post-body';
-import { Header } from '../../components/header';
-import { PostHeader } from '../../components/post-header';
-import { Layout } from '../../components/layout';
-import { getPostBySlug, getAllPosts } from '../../lib/api';
-import { PostTitle } from '../../components/post-title';
+import { Container } from '_components/container';
+import { PostBody } from '_components/post-body';
+import { Header } from '_components/header';
+import { PostHeader } from '_components/post-header';
+import { Layout } from '_components/layout';
+import { getPostBySlug, getAllPosts } from '_features/blog/blog-posts.repo';
+import { PostTitle } from '_components/post-title';
 import Head from 'next/head';
 import { CMS_NAME } from '../../lib/constants';
-import markdownToHtml from '../../lib/markdownToHtml';
+import { markdownConverterSingleton } from '_config/di-container';
+
+const markdownConverter = markdownConverterSingleton().getInstance();
 
 type Props = {
   post: any;
@@ -55,7 +57,7 @@ export default function Post({ post, preview }: Props) {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'author', 'content', 'ogImage', 'coverImage']);
-  const content = await markdownToHtml(post.content || '');
+  const content = await markdownConverter.toHtml(post.content || '');
 
   return {
     props: {

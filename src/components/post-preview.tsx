@@ -1,5 +1,5 @@
-import { Avatar } from '../components/avatar';
-import { DateFormater } from '../components/date-formater';
+import { Avatar } from '_components/avatar';
+import { DateFormater } from '_components/date-formater';
 import { CoverImage } from './cover-image';
 import Link from 'next/link';
 

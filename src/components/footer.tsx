@@ -1,5 +1,4 @@
 import { Container } from './container';
-import { EXAMPLE_PATH } from '../lib/constants';
 
 export const Footer: React.FC<{ children?: never }> = () => {
   return (
@@ -16,10 +15,7 @@ export const Footer: React.FC<{ children?: never }> = () => {
             >
               Read Documentation
             </a>
-            <a
-              href={`https://github.com/zeit/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
+            <a href={`https://github.com/belgattitude/thoughtless-mind`} className="mx-3 font-bold hover:underline">
               View on GitHub
             </a>
           </div>

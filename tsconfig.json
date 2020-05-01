@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "baseUrl": ".",
     "allowJs": true,
     "checkJs": false,
@@ -21,46 +18,17 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "test-utils": [
-        "config/jest/test-utils"
-      ],
-      "_core/*": [
-        "src/core/*"
-      ],
-      "_infra/*": [
-        "src/infra/*"
-      ],
-      "_config/*": [
-        "src/config/*"
-      ],
-      "_assets/*": [
-        "src/assets/*"
-      ],
-      "_public/*": [
-        "public/*"
-      ],
-      "_components/*": [
-        "src/components/*"
-      ],
-      "_pages/*": [
-        "src/pages/*"
-      ]
+      "test-utils": ["config/jest/test-utils"],
+      "_core/*": ["src/core/*"],
+      "_infra/*": ["src/infra/*"],
+      "_config/*": ["src/config/*"],
+      "_features/*": ["src/features/*"],
+      "_assets/*": ["src/assets/*"],
+      "_public/*": ["public/*"],
+      "_components/*": ["src/components/*"],
+      "_pages/*": ["src/pages/*"]
     }
   },
-  "exclude": [
-    "dist",
-    ".next",
-    "out",
-    "docs",
-    "public",
-    "coverage"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.json",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx"
-  ]
+  "exclude": ["dist", ".next", "out", "docs", "public", "coverage"],
+  "include": ["next-env.d.ts", "**/*.json", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
 }

@@ -1,6 +1,5 @@
 import { Container } from './container';
 import cn from 'classnames';
-import { EXAMPLE_PATH } from '../lib/constants';
 
 type Props = {
   preview?: boolean;
@@ -29,7 +28,7 @@ export const Alert: React.FC<Props> = (props) => {
             <>
               The source code for this blog is{' '}
               <a
-                href={`https://github.com/zeit/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+                href={`https://github.com/belgattitude/thoughtless-mind`}
                 className="underline hover:text-success duration-200 transition-colors"
               >
                 available on GitHub

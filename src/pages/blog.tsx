@@ -1,9 +1,9 @@
-import { Container } from '../components/container';
-import { MoreStories } from '../components/more-stories';
-import { HeroPost } from '../components/hero-post';
-import { Intro } from '../components/intro';
-import { Layout } from '../components/layout';
-import { getAllPosts } from '../lib/api';
+import { Container } from '_components/container';
+import { MoreStories } from '_components/more-stories';
+import { HeroPost } from '_components/hero-post';
+import { Intro } from '_components/intro';
+import { Layout } from '_components/layout';
+import { getAllPosts } from '_features/blog/blog-posts.repo';
 import Head from 'next/head';
 import { CMS_NAME } from '../lib/constants';
 

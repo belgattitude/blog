@@ -1,6 +1,6 @@
-import { Avatar } from '../components/avatar';
-import { DateFormater } from '../components/date-formater';
-import { CoverImage } from '../components/cover-image';
+import { Avatar } from '_components/avatar';
+import { DateFormater } from '_components/date-formater';
+import { CoverImage } from '_components/cover-image';
 import Link from 'next/link';
 
 type Props = {
