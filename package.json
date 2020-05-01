@@ -22,7 +22,6 @@
       ">1%",
       "edge >= 14",
       "not dead",
-      "not ie",
       "not op_mini all"
     ],
     "development": [
