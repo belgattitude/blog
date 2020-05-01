@@ -1,0 +1,8 @@
+dist
+build
+coverage
+doczrc.js
+.storybook
+.next
+.now
+out
