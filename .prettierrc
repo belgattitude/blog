@@ -9,7 +9,6 @@
       "files": "*.scss",
       "options": {
         "printWidth": 140,
-        "tabWidth": 2
       }
     },{
       "files": "*.json",

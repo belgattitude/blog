@@ -1,4 +1,12 @@
-export default function Avatar({ name, picture }) {
+import React from "react";
+
+type Props = {
+    name: string,
+    picture: string,
+    children?: never;
+}
+
+export const Avatar: React.FC<Props> = ({ name, picture }) => {
   return (
     <div className="flex items-center">
       <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />

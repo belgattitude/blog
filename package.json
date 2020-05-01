@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc -p . --noEmit"
   },
   "dependencies": {
     "classnames": "2.2.6",
@@ -18,6 +19,7 @@
     "remark-html": "11.0.1"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/node": "^13.13.4",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",

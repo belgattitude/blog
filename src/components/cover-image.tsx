@@ -1,7 +1,14 @@
 import cn from 'classnames'
 import Link from 'next/link'
 
-export default function CoverImage({ title, src, slug }) {
+type Props = {
+    title: string;
+    src: string;
+    slug: string;
+    children?: never;
+}
+
+export const CoverImage: React.FC<Props> = ({ title, src, slug }) => {
   const image = (
     <img
       src={src}

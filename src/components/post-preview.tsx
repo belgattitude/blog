@@ -1,16 +1,29 @@
-import Avatar from '../components/avatar'
-import DateFormater from '../components/date-formater'
-import CoverImage from './cover-image'
+import { Avatar } from '../components/avatar'
+import { DateFormater } from '../components/date-formater'
+import { CoverImage } from './cover-image'
 import Link from 'next/link'
 
-export default function PostPreview({
+type Props = {
+  title: string,
+  coverImage: string,
+  date: string,
+  excerpt: string,
+  author: {
+    name: string,
+    picture: string,
+  },
+  slug: string,
+  children?: never,
+}
+
+export const PostPreview: React.FC<Props> = ({
   title,
   coverImage,
   date,
   excerpt,
   author,
   slug,
-}) {
+}) => {
   return (
     <div>
       <div className="mb-5">

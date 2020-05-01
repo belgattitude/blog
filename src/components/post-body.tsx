@@ -1,6 +1,11 @@
 import markdownStyles from './markdown-styles.module.css'
 
-export default function PostBody({ content }) {
+type Props = {
+  content: any;
+  children?: never;
+}
+
+export const PostBody: React.FC<Props> = ({ content }) => {
   return (
     <div className="max-w-2xl mx-auto">
       <div
