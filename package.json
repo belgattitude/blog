@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build:base-css": "tailwindcss build ./src/styles/tailwind.base.css -o ./src/styles/base.css",
     "start": "next start",
     "typecheck": "tsc -p . --noEmit"
   },
@@ -24,10 +25,13 @@
     "remark-html": "11.0.1"
   },
   "devDependencies": {
+    "@tailwindcss/ui": "^0.2.2",
+    "@tailwindcssinjs/macro": "^0.3.1",
     "@types/classnames": "^2.2.10",
     "@types/node": "^13.13.4",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
+    "babel-plugin-macros": "2.8.0",
     "dotenv": "8.2.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.4.1",

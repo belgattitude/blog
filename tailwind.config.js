@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   purge: [
     './src/pages/**/*.{js,jsx,ts,tsx}',
@@ -5,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
@@ -35,7 +40,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
-
+    require('@tailwindcss/ui'),
   ],
 }
 
