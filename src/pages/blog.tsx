@@ -5,7 +5,6 @@ import { Intro } from '_components/intro';
 import { Layout } from '_components/layout';
 import { getAllPosts } from '_features/blog/blog-posts.repo';
 import Head from 'next/head';
-import { CMS_NAME } from '../lib/constants';
 
 type Props = {
   allPosts: any[];
@@ -18,7 +17,7 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Thoughtless mind blog</title>
         </Head>
         <Container>
           <Intro />

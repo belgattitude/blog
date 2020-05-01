@@ -8,7 +8,6 @@ import { Layout } from '_components/layout';
 import { getPostBySlug, getAllPosts } from '_features/blog/blog-posts.repo';
 import { PostTitle } from '_components/post-title';
 import Head from 'next/head';
-import { CMS_NAME } from '../../lib/constants';
 import { markdownConverterSingleton } from '_config/di-container';
 
 const markdownConverter = markdownConverterSingleton().getInstance();
@@ -34,10 +33,8 @@ export default function Post({ post, preview }: Props) {
           <>
             <article className="mb-32">
               <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <title>{post.title}</title>
+                {post.ogImage?.url && <meta property="og:image" content={post.ogImage.url} />}
               </Head>
               <PostHeader
                 title={post.title}
