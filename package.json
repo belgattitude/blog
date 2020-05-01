@@ -85,6 +85,6 @@
     "shell-quote": "^1.7.2",
     "tailwindcss": "^1.4.1",
     "ts-jest": "25.4.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.1-rc"
   }
 }
