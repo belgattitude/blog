@@ -1,10 +1,10 @@
-import { Container } from './container'
-import cn from 'classnames'
-import { EXAMPLE_PATH } from '../lib/constants'
+import { Container } from './container';
+import cn from 'classnames';
+import { EXAMPLE_PATH } from '../lib/constants';
 
 type Props = {
   preview?: boolean;
-}
+};
 
 export const Alert: React.FC<Props> = (props) => {
   const { preview = false } = props;
@@ -20,10 +20,7 @@ export const Alert: React.FC<Props> = (props) => {
           {preview ? (
             <>
               This is page is a preview.{' '}
-              <a
-                href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
-              >
+              <a href="/api/exit-preview" className="underline hover:text-cyan duration-200 transition-colors">
                 Click here
               </a>{' '}
               to exit preview mode.
@@ -43,5 +40,5 @@ export const Alert: React.FC<Props> = (props) => {
         </div>
       </Container>
     </div>
-  )
-}
+  );
+};

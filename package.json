@@ -6,7 +6,36 @@
     "build": "next build",
     "build:base-css": "tailwindcss build ./src/styles/tailwind.base.css -o ./src/styles/base.css",
     "start": "next start",
-    "typecheck": "tsc -p . --noEmit"
+    "lint": "yarn lint:code",
+    "lint:code": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "fix:staged": "lint-staged --allow-empty",
+    "fix:all": "yarn fix:all:code",
+    "fix:all:code": "eslint . --ext .ts,.tsx,.js,.jsx --fix --rule 'react-hooks/exhaustive-deps: off' --fix",
+    "prettier": "prettier --write \"./src/**/*.{ts,tsx,scss,js,json}\"",
+    "prettier:all": "prettier --write \"./src/**/*.{ts,tsx,scss,js,json}\"",
+    "typecheck": "tsc -p . --noEmit",
+    "deps:check": "npx npm-check-updates --dep prod,dev,optional",
+    "deps:update": "npx npm-check-updates --dep prod,dev,optional -u"
+  },
+  "browserslist": {
+    "production": [
+      ">1%",
+      "edge >= 14",
+      "not dead",
+      "not ie",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn fix:staged",
+      "pre-push": "yarn run typecheck"
+    }
   },
   "dependencies": {
     "@emotion/cache": "11.0.0-next.12",
@@ -31,10 +60,32 @@
     "@types/node": "^13.13.4",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "babel-jest": "^25.5.1",
     "babel-plugin-macros": "2.8.0",
     "dotenv": "8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-jest-formatting": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "husky": "4.2.5",
+    "jest": "^25.5.3",
+    "jest-cli": "^25.5.3",
+    "jest-enzyme": "^7.1.2",
+    "jest-localstorage-mock": "^2.4.2",
+    "lint-staged": "^10.2.2",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "shell-quote": "^1.7.2",
     "tailwindcss": "^1.4.1",
+    "ts-jest": "25.4.0",
     "typescript": "^3.8.3"
   }
 }

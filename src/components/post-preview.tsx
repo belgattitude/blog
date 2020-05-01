@@ -1,29 +1,22 @@
-import { Avatar } from '../components/avatar'
-import { DateFormater } from '../components/date-formater'
-import { CoverImage } from './cover-image'
-import Link from 'next/link'
+import { Avatar } from '../components/avatar';
+import { DateFormater } from '../components/date-formater';
+import { CoverImage } from './cover-image';
+import Link from 'next/link';
 
 type Props = {
-  title: string,
-  coverImage: string,
-  date: string,
-  excerpt: string,
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
   author: {
-    name: string,
-    picture: string,
-  },
-  slug: string,
-  children?: never,
-}
+    name: string;
+    picture: string;
+  };
+  slug: string;
+  children?: never;
+};
 
-export const PostPreview: React.FC<Props> = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}) => {
+export const PostPreview: React.FC<Props> = ({ title, coverImage, date, excerpt, author, slug }) => {
   return (
     <div>
       <div className="mb-5">
@@ -40,5 +33,5 @@ export const PostPreview: React.FC<Props> = ({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
     </div>
-  )
-}
+  );
+};

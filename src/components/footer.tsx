@@ -1,7 +1,7 @@
-import { Container } from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import { Container } from './container';
+import { EXAMPLE_PATH } from '../lib/constants';
 
-export const Footer: React.FC<{children?: never}> = () => {
+export const Footer: React.FC<{ children?: never }> = () => {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
       <Container>
@@ -26,5 +26,5 @@ export const Footer: React.FC<{children?: never}> = () => {
         </div>
       </Container>
     </footer>
-  )
-}
+  );
+};

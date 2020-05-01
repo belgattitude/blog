@@ -4,7 +4,7 @@ import { CacheProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
 import { globalStyles } from '../styles/styles';
 
-import '../styles/index.css'
+import '../styles/index.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
@@ -13,6 +13,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Component {...pageProps} />
     </CacheProvider>
   );
-}
+};
 
 export default MyApp;
