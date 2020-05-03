@@ -103,5 +103,9 @@
     "tailwindcss": "^1.4.4",
     "ts-jest": "^25.4.0",
     "typescript": "^3.9.1-rc"
+  },
+  "engines": {
+    "node": ">=10.13",
+    "yarn": ">=1.19.0 <2.0.0"
   }
 }
