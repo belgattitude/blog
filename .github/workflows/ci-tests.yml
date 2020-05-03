@@ -55,6 +55,14 @@ jobs:
         run: |
           yarn typecheck
 
+      - name: Unit tests
+        run: |
+          yarn test:unit
+
+      - name: Integration tests
+        run: |
+          yarn test:integ
+
       - name: Build
         run: |
           yarn build
