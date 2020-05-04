@@ -1,7 +1,8 @@
-import { Avatar } from '_components/avatar';
-import { DateFormater } from '_components/date-formater';
+import { Avatar } from '_components/blog/avatar';
+import { DateFormater } from '_components/blog/date-formater';
 import { CoverImage } from './cover-image';
 import Link from 'next/link';
+import LazyLoad from 'react-lazyload';
 
 type Props = {
   title: string;
@@ -20,7 +21,9 @@ export const PostPreview: React.FC<Props> = ({ title, coverImage, date, excerpt,
   return (
     <div>
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <LazyLoad>
+          <CoverImage slug={slug} title={title} src={coverImage} />
+        </LazyLoad>
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">

@@ -28,7 +28,7 @@ export const Alert: React.FC<Props> = (props) => {
             <>
               The source code for this blog is{' '}
               <a
-                href={`https://github.com/belgattitude/thoughtless-mind`}
+                href={`https://github.com/unsorted/skunkies`}
                 className="underline hover:text-success duration-200 transition-colors"
               >
                 available on GitHub

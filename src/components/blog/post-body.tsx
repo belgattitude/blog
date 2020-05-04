@@ -1,7 +1,7 @@
 import markdownStyles from './markdown-styles.module.css';
 
 type Props = {
-  content: any;
+  content: string;
   children?: never;
 };
 

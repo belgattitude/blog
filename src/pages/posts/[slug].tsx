@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { Container } from '_components/container';
-import { PostBody } from '_components/post-body';
-import { Header } from '_components/header';
-import { PostHeader } from '_components/post-header';
-import { Layout } from '_components/layout';
+import { Container } from '_components/layout/container';
+import { PostBody } from '_components/blog/post-body';
+import { Header } from '_components/layout/header';
+import { PostHeader } from '_components/blog/post-header';
+import { Layout } from '_components/layout/layout';
 import { getPostBySlug, getAllPosts } from '_features/blog/blog-posts.repo';
-import { PostTitle } from '_components/post-title';
+import { PostTitle } from '_components/blog/post-title';
 import Head from 'next/head';
 import { markdownConverterSingleton } from '_config/di-container';
 

@@ -1,4 +1,4 @@
-const { getBabelAliases } = require('./config/build/aliases');
+const { getBabelAliases } = require('./config/build/babel-aliases');
 
 const aliasPlugin = [
   'module-resolver',

@@ -1,7 +1,7 @@
-import { Avatar } from '_components/avatar';
-import { DateFormater } from '_components/date-formater';
-import { CoverImage } from '_components/cover-image';
-import { PostTitle } from '_components/post-title';
+import { Avatar } from '_components/blog/avatar';
+import { DateFormater } from '_components/blog/date-formater';
+import { CoverImage } from '_components/blog/cover-image';
+import { PostTitle } from '_components/blog/post-title';
 
 type Props = {
   title: string;

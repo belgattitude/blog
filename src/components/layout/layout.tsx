@@ -1,6 +1,6 @@
-import { Alert } from '_components/alert';
-import { Footer } from '_components/footer';
-import { Meta } from '_components/meta';
+import { Alert } from '_components/layout/alert';
+import { Footer } from '_components/layout/footer';
+import { Meta } from '_components/layout/meta';
 
 type Props = {
   preview?: boolean;

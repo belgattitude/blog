@@ -1,4 +1,4 @@
-const aliases = {
+const babelAliases = {
   _config: './src/config',
   _core: './src/core',
   _assets: './src/assets',
@@ -13,7 +13,7 @@ const aliases = {
  * Return aliases for babel
  */
 const getBabelAliases = () => {
-  return aliases;
+  return babelAliases;
 };
 
 module.exports = {
