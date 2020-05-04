@@ -13,7 +13,7 @@ export const CoverImage: React.FC<Props> = ({ title, src, slug }) => {
     <img
       src={src}
       alt={`Cover for ${title}`}
-      className={cn('rounded-lg object-cover h-64 w-full shadow-small', {
+      className={cn('object-cover h-72 w-full shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}
     />
